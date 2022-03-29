@@ -1,0 +1,5 @@
+Standard Shipping, Normal shipping method, 4.50, 1.86
+FedEx, Faster; but more expensive, 0.00, 4.65
+UPS, Less expensive for very large orders, 12.00, 0.95
+
+# Type of Shipping, Description, Cost, Cost Per Pound
