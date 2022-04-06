@@ -7,5 +7,9 @@ class Products(object):
         self._product = str(name).strip()
         if is_number(price)
 
+    def get_product(self, filename=products.txt):
+        read.file(products.txt)
+        print(f"{products.txt}")
+
     def __str__(self):
         return self._Products

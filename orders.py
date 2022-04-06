@@ -4,5 +4,6 @@ class Orders(object):
         self._orders = Orders
 
     def __str__(self):
-        return self._orders
+        return f"{self._orders}          {get_total}" \
+               f"{self._shippingMethod}  {total_shipping}"
     

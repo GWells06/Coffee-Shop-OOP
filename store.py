@@ -2,6 +2,8 @@ from product import Product
 from customer import Customer
 from shippingmethod import ShippingMethod
 
+
+
 class Store(object):
 
     def __init__(self):
@@ -38,7 +40,7 @@ class Store(object):
         with open(filename, 'shippingMethod.txt') as shippingFile:
             name, description, cost, cost per pound = line.split(',')
             try:
-                self._shippingMethods.append(ShippingMethod(name, description, price, cost per pound))
+                self._shippingMethods.append(ShippingMethod(name, description, price, cost_per_pound))
 
 
         pass
@@ -47,14 +49,15 @@ class Store(object):
         """
         Returns a string of products used to display the products.
         """
-        return str(Product(name, type, cost per pound))
+        return str(Product(name, type, cost_per_pound))
         pass
 
-    def display_shipping_methods(self):
+    def display_shipping_methods(self, filename=shippingMethod.txt):
         """
         Returns a string of shipping methods used to display the shipping methods .
         """
-        pass
+        read.file(f'shippingMethod.txt')
+
 
     def sales(self):
         """
@@ -89,6 +92,10 @@ class Store(object):
         #
         # Create a new customer object and make it the current customer.
         #
+        print("Hello new Customer!")
+        custName = input("What is your name?")
+        custAddress = input("What is your address?")
+
         self._customers.append(customer)
 
     def add_order(self):
